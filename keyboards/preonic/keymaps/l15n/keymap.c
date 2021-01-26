@@ -66,17 +66,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * |   A  |   R  |   S  |   T  |   "  |  -   |   D  |   H  |   N  |   E  |   I  |   O  |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |   Z  |   X  |   C  |   V  |Shift |Enter |   B  |   K  |   M  |   ,  |  Up  |   .  |
+ * |   Z  |   X  |   C  |   V  | CAPS |Enter |   B  |   K  |   M  |   ,  |  Up  |   .  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Brite| Ctrl | Alt  | GUI  |Lower |    Space    |Raise |   /  | Left | Down |Right |
+ * | Shift| Ctrl | Alt  | GUI  |Lower |    Space    |Raise |   /  | Left | Down |Right |
  * `-----------------------------------------------------------------------------------'
  */
 [_COLEMAK] = LAYOUT_preonic_grid(
   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_GRV,  KC_BSPC, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
   KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,    KC_TAB,  KC_ESC,  KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,
   KC_A,    KC_R,    KC_S,    KC_T,    KC_D,    KC_MINUS, KC_QUOT, KC_H,   KC_N,    KC_E,    KC_I,    KC_O,
-  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LSFT, KC_ENT,  KC_K,    KC_M,    KC_COMM, KC_UP,   KC_DOT,
-  BACKLIT, KC_LCTL, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_SLSH, KC_LEFT, KC_DOWN, KC_RGHT
+  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_CAPS, KC_ENT,  KC_K,    KC_M,    KC_COMM, KC_UP,   KC_DOT,
+  KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_SLSH, KC_LEFT, KC_DOWN, KC_RGHT
 ),
 
 /* Dvorak
