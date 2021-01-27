@@ -64,19 +64,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |   Q  |   W  |   F  |   P  | Tab  | Esc  |   G  |   J  |   L  |   U  |   Y  |   ;  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |   A  |   R  |   S  |   T  |   "  |  -   |   D  |   H  |   N  |   E  |   I  |   O  |
+ * |   A  |   R  |   S  |   T  |   -  |  '   |   D  |   H  |   N  |   E  |   I  |   O  |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |   Z  |   X  |   C  |   V  | CAPS |Enter |   B  |   K  |   M  |   ,  |  Up  |   .  |
+ * |   Z  |   X  |   C  |   V  |   \  |Enter |   B  |   K  |   M  |   ,  |  Up  |   .  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Ctrl | Alt  | GUI  |Shft (=)|Lower |    Space    |Raise |Shft (/) | Left | Down |Right |
+ * | Ctrl | Alt  | lower|Sft (=)| GUI (Caps) |    Space    |Raise |Shft (/) | Left | Down |Right |
  * `-----------------------------------------------------------------------------------'
  */
 [_COLEMAK] = LAYOUT_preonic_grid(
   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_GRV,  KC_BSPC, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
   KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,    KC_TAB,  KC_ESC,  KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,
   KC_A,    KC_R,    KC_S,    KC_T,    KC_D,    KC_MINUS, KC_QUOT, KC_H,   KC_N,    KC_E,    KC_I,    KC_O,
-  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    MT(MOD_LGUI,KC_CAPS), KC_ENT,  KC_K,    KC_M,    KC_COMM, KC_UP,   KC_DOT,
-  KC_LCTL, KC_LALT, KC_LGUI, MT(MOD_LSFT,KC_EQUAL), LOWER, KC_SPC,  KC_SPC,  RAISE,   MT(MOD_RSFT,KC_SLSH), KC_LEFT, KC_DOWN, KC_RGHT
+  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_BSLS, KC_ENT,  KC_K,    KC_M,    KC_COMM, KC_UP,   KC_DOT,
+  KC_LCTL, KC_LALT, LOWER, MT(MOD_LSFT,KC_EQUAL), MT(MOD_LGUI,KC_CAPS), KC_SPC,  KC_SPC,  RAISE,   MT(MOD_RSFT,KC_SLSH), KC_LEFT, KC_DOWN, KC_RGHT
 ),
 
 /* Dvorak
