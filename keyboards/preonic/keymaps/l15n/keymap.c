@@ -68,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+-------+-------+--------+-------|------+-------+------+------+------+------|
  * |   Z  |   X  |   C   |   V   |  Esc   | Enter |   B  |   K   |   M  |   ,  |  Up  |   .  |
  * |------+------+-------+-------+--------+-------+------+-------+------+------+------+------|
- * | Ctrl | Alt  | Raise | Sft = | GUI CL |     Space    | Lower |Sft / | Left | Down |Right |
+ * | Raise| Alt  | Ctrl  | Sft = | GUI CL |     Space    | Lower |Sft / | Left | Down |Right |
  * `-----------------------------------------------------------------------------------------'
  */
 [_COLEMAK] = LAYOUT_preonic_grid(
