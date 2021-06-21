@@ -62,13 +62,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,----------------------------------------------------------------------------------------.
  * |   1  |   2  |   3   |   4   |    `   | Bksp  |   5  |   6   |   7  |   8  |   9  |   0  |
  * |------+------+-------+-------+--------+-------+------+-------+------+------+------+------|
- * |   Q  |   W  |   F   |   P   |  Tab   |   \  |   G  |   J   |   L  |   U  |   Y  |   ;  |
+ * |   Q  |   W  |   F   |   P   |  Tab   |   \   |   G  |   J   |   L  |   U  |   Y  |   ;  |
  * |------+------+-------+-------+--------+--------------+-------+------+------+------+------|
- * |   A  |   R  |   S   |   T   |  hyper1   |   '   |   D  |   H   |   N  |   E  |   I  |   O  |
+ * |   A  |   R  |   S   |   T   | hypr1  |   '   |   D  |   H   |   N  |   E  |   I  |   O  |
  * |------+------+-------+-------+--------+-------|------+-------+------+------+------+------|
  * |   Z  |   X  |   C   |   V   |  Esc   | Enter |   B  |   K   |   M  |   ,  |  Up  |   .  |
  * |------+------+-------+-------+--------+-------+------+-------+------+------+------+------|
- * | Raise| Alt  | Ctrl  | Sft = | GUI CL |     Space    | Lower |Sft / | Left | Down |Right |
+ * | Raise| Alt  | Ctrl  | Sft = | GUI -  |     Space    | Lower |Sft / | Left | Down |Right |
  * `-----------------------------------------------------------------------------------------'
  */
 [_COLEMAK] = LAYOUT_preonic_grid(
@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,    KC_TAB,  KC_BSLS,  KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,
   KC_A,    KC_R,    KC_S,    KC_T,    KC_D,    HYPR(KC_1), KC_QUOT, KC_H,   KC_N,    KC_E,    KC_I,    KC_O,
   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    MT(MOD_LSFT,KC_ESC),  MT(MOD_RSFT,KC_ENT),  KC_K,    KC_M,    KC_COMM, KC_UP,   KC_DOT,
-  RAISE,   KC_LALT, KC_LCTL, MT(MOD_LSFT,KC_EQUAL), KC_LGUI, KC_SPC,  KC_SPC, LOWER, MT(MOD_RSFT,KC_SLSH), KC_LEFT, KC_DOWN, KC_RGHT
+  RAISE,   KC_LALT, KC_LCTL, MT(MOD_LSFT,KC_EQUAL), MT(MOD_LGUI, KC_MINUS), KC_SPC,  KC_SPC, LOWER, MT(MOD_RSFT,KC_SLSH), KC_LEFT, KC_DOWN, KC_RGHT
 ),
 
 /* Dvorak
@@ -108,7 +108,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * | Del  |  F1  |  F2  |  F3  |  F4  |  F5  |  -   |   _  |   +  |   {  |   }  |  |   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |  F7  |  F8  |  F9  | EISU |  F11 |  F12 | KANA |ISO | |   [  |   ]  |      |
+ * |      |  F7  |  F8  |  F9  | EISU |  F11 |  F12 | KANA |ISO | |   [  |   ]  |  \   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |             |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
