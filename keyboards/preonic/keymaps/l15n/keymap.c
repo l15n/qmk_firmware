@@ -20,7 +20,7 @@
 enum preonic_layers {
   _QWERTY,
   _COLEMAK,
-  _DVORAK,
+  _MODDH,
   _LOWER,
   _RAISE,
   _ADJUST
@@ -29,7 +29,7 @@ enum preonic_layers {
 enum preonic_keycodes {
   QWERTY = SAFE_RANGE,
   COLEMAK,
-  DVORAK,
+  MODDH,
   LOWER,
   RAISE,
   BACKLIT
@@ -60,44 +60,44 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Typematrix-style Colemak
  *
  * ,----------------------------------------------------------------------------------------.
- * |   1  |   2  |   3   |   4   |    `   | Bksp  |   5  |   6   |   7  |   8  |   9  |   0  |
- * |------+------+-------+-------+--------+-------+------+-------+------+------+------+------|
- * |   Q  |   W  |   F   |   P   |  Tab   |   \   |   G  |   J   |   L  |   U  |   Y  |   ;  |
- * |------+------+-------+-------+--------+--------------+-------+------+------+------+------|
- * |   A  |   R  |   S   |   T   | hypr1  |   '   |   D  |   H   |   N  |   E  |   I  |   O  |
- * |------+------+-------+-------+--------+-------|------+-------+------+------+------+------|
- * |   Z  |   X  |   C   |   V   |  Esc   | Enter |   B  |   K   |   M  |   ,  |  Up  |   .  |
- * |------+------+-------+-------+--------+-------+------+-------+------+------+------+------|
- * | Raise| Alt  | Ctrl  | Sft = | GUI -  |     Space    | Lower |Sft / | Left | Down |Right |
+ * |   1  |   2  |   3   |   4   |   5   |   `   | Bksp |   6   |   7  |   8  |   9  |   0  |
+ * |------+------+-------+-------+-------+-------+------+-------+------+------+------+------|
+ * |   Q  |   W  |   F   |   P   |   G   |  Tab  |   \  |   J   |   L  |   U  |   Y  |   ;  |
+ * |------+------+-------+-------+-------+--------------+-------+------+------+------+------|
+ * |   A  |   R  |   S   |   T   |   D   |  Esc  |   '  |   H   |   N  |   E  |   I  |   O  |
+ * |------+------+-------+-------+-------+-------|------+-------+------+------+------+------|
+ * |   Z  |   X  |   C   |   V   |   B   | Hypr1 | Entr |   K   |   M  |   ,  |  Up  |   .  |
+ * |------+------+-------+-------+-------+-------+------+-------+------+------+------+------|
+ * | Raise| Alt  | Ctrl  | Sft = | GUI - |     Space    | Lower |Sft / | Left | Down |Right |
  * `-----------------------------------------------------------------------------------------'
  */
 [_COLEMAK] = LAYOUT_preonic_grid(
   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_GRV,  KC_BSPC, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
   KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,    KC_TAB,  KC_BSLS,  KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,
-  KC_A,    KC_R,    KC_S,    KC_T,    KC_D,    HYPR(KC_1), KC_QUOT, KC_H,   KC_N,    KC_E,    KC_I,    KC_O,
-  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    MT(MOD_LSFT,KC_ESC),  MT(MOD_RSFT,KC_ENT),  KC_K,    KC_M,    KC_COMM, KC_UP,   KC_DOT,
+  KC_A,    KC_R,    KC_S,    KC_T,    KC_D,    MT(MOD_LSFT,KC_ESC),  KC_QUOT, KC_H,   KC_N,    KC_E,    KC_I,    KC_O,
+  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    HYPR(KC_1), MT(MOD_RSFT,KC_ENT),  KC_K,    KC_M,    KC_COMM, KC_UP,   KC_DOT,
   RAISE,   KC_LALT, KC_LCTL, MT(MOD_LSFT,KC_EQUAL), MT(MOD_LGUI, KC_MINUS), KC_SPC,  KC_SPC, LOWER, MT(MOD_RSFT,KC_SLSH), KC_LEFT, KC_DOWN, KC_RGHT
 ),
 
-/* Dvorak
- * ,-----------------------------------------------------------------------------------.
- * |   `  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
- * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Tab  |   "  |   ,  |   .  |   P  |   Y  |   F  |   G  |   C  |   R  |   L  | Del  |
- * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | Esc  |   A  |   O  |   E  |   U  |   I  |   D  |   H  |   T  |   N  |   S  |  /   |
- * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | Shift|   ;  |   Q  |   J  |   K  |   X  |   B  |   M  |   W  |   V  |   Z  |Enter |
- * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Brite| Ctrl | Alt  | GUI  |Lower |    Space    |Raise | Left | Down |  Up  |Right |
- * `-----------------------------------------------------------------------------------'
+/* Colemak Mod DH
+ * ,----------------------------------------------------------------------------------------.
+ * |   1  |   2  |   3   |   4   |   5   |   `   | Bksp |   6   |   7  |   8  |   9  |   0  |
+ * |------+------+-------+-------+-------+-------+------+-------+------+------+------+------|
+ * |   Q  |   W  |   F   |   P   |   B   |  Tab  |   \  |   J   |   L  |   U  |   Y  |   ;  |
+ * |------+------+-------+-------+-------+--------------+-------+------+------+------+------|
+ * |   A  |   R  |   S   |   T   |   G   |  Esc  |   '  |   M   |   N  |   E  |   I  |   O  |
+ * |------+------+-------+-------+-------+-------|------+-------+------+------+------+------|
+ * |   Z  |   X  |   C   |   D   |   V   | Hypr1 | Entr |   K   |   H  |   ,  |  Up  |   .  |
+ * |------+------+-------+-------+-------+-------+------+-------+------+------+------+------|
+ * | Raise| Alt  | Ctrl  | Sft = | GUI - |     Space    | Lower |Sft / | Left | Down |Right |
+ * `-----------------------------------------------------------------------------------------'
  */
-[_DVORAK] = LAYOUT_preonic_grid(
-  KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
-  KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,    KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_DEL,
-  KC_ESC,  KC_A,    KC_O,    KC_E,    KC_U,    KC_I,    KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_SLSH,
-  KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_ENT,
-  BACKLIT, KC_LCTL, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
+[_MODDH] = LAYOUT_preonic_grid(
+    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_GRV,  KC_BSPC, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
+    KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,    KC_TAB,  KC_BSLS,  KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,
+    KC_A,    KC_R,    KC_S,    KC_T,    KC_G,    MT(MOD_LSFT,KC_ESC),  KC_QUOT, KC_M,   KC_N,    KC_E,    KC_I,    KC_O,
+    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,    HYPR(KC_1), MT(MOD_RSFT,KC_ENT),  KC_K,    KC_H,    KC_COMM, KC_UP,   KC_DOT,
+    RAISE,   KC_LALT, KC_LCTL, MT(MOD_LSFT,KC_EQUAL), MT(MOD_LGUI, KC_MINUS), KC_SPC,  KC_SPC, LOWER, MT(MOD_RSFT,KC_SLSH), KC_LEFT, KC_DOWN, KC_RGHT
 ),
 
 /* Lower
@@ -108,7 +108,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * | Del  |  F1  |  F2  |  F3  |  F4  |  F5  |  -   |   _  |   +  |   {  |   }  |  |   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |  F7  |  F8  |  F9  | EISU |  F11 |  F12 | KANA |ISO | |   [  |   ]  |  \   |
+ * |Brite |  F7  |  F8  |  F9  | EISU |  F11 |  F12 | KANA |ISO | |   [  |   ]  |  \   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |             |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
@@ -117,7 +117,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
   KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL,
   KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_MINUS,   KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE,
-  _______, KC_F7,   KC_F8,   KC_F9,   KC_LANG2,  KC_F11,  KC_F12,KC_LANG1,S(KC_NUBS),KC_LBRC, KC_RBRC, KC_BSLS,
+  BACKLIT, KC_F7,   KC_F8,   KC_F9,   KC_LANG2,  KC_F11,  KC_F12,KC_LANG1,S(KC_NUBS),KC_LBRC, KC_RBRC, KC_BSLS,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 ),
 
@@ -148,7 +148,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      | Reset|      |      |      |      |      |      |      |      |      |  Del |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |      |      |Aud on|AudOff|AGnorm|AGswap|Qwerty|Colemk|Dvorak|      |      |
+ * |      |      |      |Aud on|AudOff|AGnorm|AGswap|Qwerty|Colemk|Mod DH|      |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |Voice-|Voice+|Mus on|MusOff|MidiOn|MidOff|      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -158,7 +158,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_ADJUST] = LAYOUT_preonic_grid(
   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
   _______, RESET,   DEBUG,   _______, _______, _______, _______, TERM_ON, TERM_OFF,_______, _______, KC_DEL,
-  _______, _______, MU_MOD,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, QWERTY,  COLEMAK, DVORAK,  _______, _______,
+  _______, _______, MU_MOD,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, QWERTY,  COLEMAK,   MODDH,  _______, _______,
   _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  _______, _______, _______, _______, _______,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 )
@@ -180,9 +180,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           }
           return false;
           break;
-        case DVORAK:
+        case MODDH:
           if (record->event.pressed) {
-            set_single_persistent_default_layer(_DVORAK);
+            set_single_persistent_default_layer(_MODDH);
           }
           return false;
           break;
