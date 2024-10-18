@@ -68,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+-------+-------+-------+-------|------+-------+------+------+------+------|
  * |   Z  |   X  |   C   |   V   |   B   | Hypr1 | Entr |   K   |   M  |   ,  |  Up  |   .  |
  * |------+------+-------+-------+-------+-------+------+-------+------+------+------+------|
- * | Raise| Alt  | Ctrl  | Sft = | GUI - |     Space    | Lower |Sft / | Left | Down |Right |
+ * | Raise| Alt  | Ctrl  |  Sft  | GUI - |     Space    | Lower |Sft / | Left | Down |Right |
  * `-----------------------------------------------------------------------------------------'
  */
 [_COLEMAK] = LAYOUT_preonic_grid(
@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,    KC_TAB,  KC_BSLS,  KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,
   KC_A,    KC_R,    KC_S,    KC_T,    KC_D,    MT(MOD_LSFT,KC_ESC),  KC_QUOT, KC_H,   KC_N,    KC_E,    KC_I,    KC_O,
   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    HYPR(KC_1), MT(MOD_RSFT,KC_ENT),  KC_K,    KC_M,    KC_COMM, KC_UP,   KC_DOT,
-  RAISE,   KC_LALT, KC_LCTL, MT(MOD_LSFT,KC_EQUAL), MT(MOD_LGUI, KC_MINUS), KC_SPC,  KC_SPC, LOWER, MT(MOD_RSFT,KC_SLSH), KC_LEFT, KC_DOWN, KC_RGHT
+  RAISE,   KC_LALT, KC_LCTL, KC_LSFT, MT(MOD_LGUI, KC_MINUS), KC_SPC,  KC_SPC, LOWER, MT(MOD_RSFT,KC_SLSH), KC_LEFT, KC_DOWN, KC_RGHT
 ),
 
 /* Colemak Mod DH
@@ -89,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+-------+-------+-------+-------|------+-------+------+------+------+------|
  * |   Z  |   X  |   C   |   D   |   V   | Hypr1 | Entr |   K   |   H  |   ,  |  Up  |   .  |
  * |------+------+-------+-------+-------+-------+------+-------+------+------+------+------|
- * | Raise| Alt  | Ctrl  | Sft = | GUI - |     Space    | Lower |Sft / | Left | Down |Right |
+ * | Raise| Alt  | Ctrl  |  Sft  | GUI - |     Space    | Lower |Sft / | Left | Down |Right |
  * `-----------------------------------------------------------------------------------------'
  */
 [_MODDH] = LAYOUT_preonic_grid(
@@ -97,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,    KC_TAB,  KC_BSLS,  KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,
     KC_A,    KC_R,    KC_S,    KC_T,    KC_G,    MT(MOD_LSFT,KC_ESC),  KC_QUOT, KC_M,   KC_N,    KC_E,    KC_I,    KC_O,
     KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,    HYPR(KC_1), MT(MOD_RSFT,KC_ENT),  KC_K,    KC_H,    KC_COMM, KC_UP,   KC_DOT,
-    RAISE,   KC_LALT, KC_LCTL, MT(MOD_LSFT,KC_EQUAL), MT(MOD_LGUI, KC_MINUS), KC_SPC,  KC_SPC, LOWER, MT(MOD_RSFT,KC_SLSH), KC_LEFT, KC_DOWN, KC_RGHT
+    RAISE,   KC_LALT, KC_LCTL, KC_LSFT, MT(MOD_LGUI, KC_MINUS), KC_SPC,  KC_SPC, LOWER, MT(MOD_RSFT,KC_SLSH), KC_LEFT, KC_DOWN, KC_RGHT
 ),
 
 /* Lower
