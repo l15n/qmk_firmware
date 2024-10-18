@@ -12,6 +12,9 @@
 
 #define MUSIC_MASK (keycode != KC_NO)
 
+// Adjusted duration for mod_tap. Default is 200ms
+#define TAPPING_TERM 150
+
 /*
  * MIDI options
  */
