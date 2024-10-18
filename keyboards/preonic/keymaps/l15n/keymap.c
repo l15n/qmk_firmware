@@ -106,9 +106,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * |   ~  |   !  |   @  |   #  |   $  |   %  |   ^  |   &  |   *  |   (  |   )  | Del  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | Del  |  F1  |  F2  |  F3  |  F4  |  F5  |  -   |   _  |   +  |   {  |   }  |  |   |
+ * | Del  |  F1  |  F2  |   _  |   -  |  F5  |  -   |   -  |   _  |   {  |   }  |  |   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |Brite |  F7  |  F8  |  F9  | EISU |  F11 |  F12 | KANA |ISO | |   [  |   ]  |  \   |
+ * |Brite |  F7  |  F8  |   +  |   =  | EISU | KANA |  =   |   +  |   [  |   ]  |  \   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |             |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
@@ -116,8 +116,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_LOWER] = LAYOUT_preonic_grid(
   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
   KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL,
-  KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_MINUS,   KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE,
-  BACKLIT, KC_F7,   KC_F8,   KC_F9,   KC_LNG2,  KC_F11,  KC_F12, KC_LNG1,S(KC_NUBS),KC_LBRC, KC_RBRC, KC_BSLS,
+  KC_DEL,  KC_F1,   KC_F2,   KC_UNDS, KC_MINUS,KC_F5,   KC_MINUS, KC_MINUS,  KC_UNDS, KC_LCBR, KC_RCBR, KC_PIPE,
+  BACKLIT, KC_F7,   KC_F8,   KC_PLUS, KC_EQUAL,KC_LNG2, KC_LNG1, KC_EQUAL,KC_PLUS,KC_LBRC, KC_RBRC, KC_BSLS,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 ),
 
